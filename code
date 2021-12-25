@@ -1,0 +1,30 @@
+import string
+import random
+
+lettres = string.ascii_letters
+chiffres = string.digits
+ponctuation = string.punctuation
+
+while True:
+    try:
+        _lettres = eval(input("Voulez vous des lettres dans le mot de passe ? (True ou False): "))
+        _chiffres = eval(input("Voulez vous des chiffres dans le mot de passe ? (True ou False): "))
+        _ponctuation = eval(input("Voulez vous des ponctuations dans le mot de passe ?  (True ou False): "))
+
+        longeur = int(input("De quelle longueur voulez vous que soit le mot de passe ? : "))
+        
+        # Moment d'ajout des caractères
+        caracteres = ""
+        caracteres += lettres if _lettres else ""
+        caracteres += chiffres if _chiffres else ""
+        caracteres += ponctuation if _ponctuation else ""
+        mdp = "".join(random.choices(caracteres, k=longeur)) # Générer le mot de passe
+        print(mdp) # sort le mdp créer aléatoirement 
+    except:
+        print("Suivez les instructions données!")
+        
+    try:
+        if eval(input("Voulez vous quitter le programme  (True ou False): ")):
+            break
+    except:
+        print("Suivez les instructions qui vous sont données")
