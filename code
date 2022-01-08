@@ -10,7 +10,7 @@ while True:
         _lettres = eval(input("Voulez vous des lettres dans le mot de passe ? (True ou False): "))
         _chiffres = eval(input("Voulez vous des chiffres dans le mot de passe ? (True ou False): "))
         _ponctuation = eval(input("Voulez vous des ponctuations dans le mot de passe ?  (True ou False): "))
-
+            #eval() nous permet d’exécuter des chaînes de caractères en tant que instruction Python.
         longeur = int(input("De quelle longueur voulez vous que soit le mot de passe ? : "))
         
         # Moment d'ajout des caractères
@@ -18,13 +18,15 @@ while True:
         caracteres += lettres if _lettres else ""
         caracteres += chiffres if _chiffres else ""
         caracteres += ponctuation if _ponctuation else ""
-        mdp = "".join(random.choices(caracteres, k=longeur)) # Générer le mot de passe
+        mdp = "".join(random.choices(caracteres, k=longeur)) # Générer le mot de passe, 
+            #join() permet de créer des chaînes à partir des objets itérables 
+            #et random.choices renvoie une liste de taille k d'éléments choisis
         print(mdp) # sort le mdp créer aléatoirement 
     except:
         print("Suivez les instructions données!")
         
     try:
         if eval(input("Voulez vous quitter le programme  (True ou False): ")):
-            break
+            break #permet de casser la boucle
     except:
         print("Suivez les instructions qui vous sont données")
