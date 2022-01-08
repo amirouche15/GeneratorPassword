@@ -1,0 +1,4 @@
+- Attendre O/N au lieu de True/False trop long
+- Mettre O par défaut si l'utilisateur appuie sur Entrée et ne renseigne rien (sauf pour le nombre de lettres)
+- Repenser la détection d'erreur de saisie pour ne pas avoir à tout recommencer. Reprendre la dernière question posée... Là, il faudra peut-être revoir la structure du programme.
+- Faire une interface graphique avec Tkinter ou Pygame (cases à cocher et une case à renseigner pour la longueur de la chaîne)
