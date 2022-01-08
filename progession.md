@@ -15,3 +15,7 @@ de manière aléatoire) sachant que k représente la longeur choisi par l'utilis
 
 
 sources utilisés: bibliothèques des modules string et random
+
+eval() nous permet d’exécuter des chaînes de caractères en tant que instruction Python.
+join() permet de créer des chaînes à partir des objets itérables
+random.choices renvoie une liste de taille k d'éléments choisis
